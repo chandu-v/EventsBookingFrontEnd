@@ -1,6 +1,6 @@
 export class Event{
-    event_name:string;
+    name:string;
     image_url:string;
-    seats_available:number;
+    seats:number;
     date:string;
 }

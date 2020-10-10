@@ -1,20 +1,34 @@
-<div class="container">
-    <div class="row">
-      <div class="col" *ngFor="let item of events" >
-        <div class="card" >
-          <div class="card-body">
-            <h3 class="card-title">Title</h3>
-            <p class="card-text">{{item.a}}</p>
-          </div>
-        </div>
-      </div>
-    </div>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-3">Events</h1>
+    <p class="lead">Events hub</p>
+  </div>
 </div>
-<!-- <div class="card" *ngFor="let item of events">
-    <img class="card-img-top" data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRBgsEHVKZpdFyIt874xuk88z3Wg0OhqzIbZA&usqp=CAU" alt="Card image cap">
-    <div class="card-body">
-        <h4 class="card-title">{{item.a}}</h4>
-        <p class="card-text">Text</p>
+
+<div class="container">
+  <div class="row">
+
+      <!-- <div class="row mb-2"> -->
+        <div class="col-md-6" *ngFor="let item of events">
+          <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col-auto d-none d-lg-block">
+              <img  class="bd-placeholder-img" width="200" height="250" src="https://live.staticflickr.com/4561/38054606355_26429c884f_b.jpg" alt="">
+            </div>
+            <div class="col p-4 d-flex flex-column position-static">
+              <!-- <strong class="d-inline-block mb-2 text-primary">{{item.a}}</strong> -->
+              <h3 class="mb-0">{{item.name}}</h3>
+              <div class="mb-1 text-muted">{{item.date}}</div>
+              <p>Seats Available: {{item.seats}}</p>   
+              <button class="btn" (click)="buttonclicked(item._id)">
+                      <span class="badge badge-primary"> Book Seat</span>
+              </button>           
+            </div>
+            
+          </div>
+        <!-- </div> -->
+        
+      
     </div>
-    
-</div> -->
+
+  </div>
+
