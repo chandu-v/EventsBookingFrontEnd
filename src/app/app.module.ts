@@ -3,10 +3,14 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ViewEventsComponent } from './view-events/view-events.component';
+import { BookEventComponent } from './book-event/book-event.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ViewEventsComponent,
+    BookEventComponent
   ],
   imports: [
     BrowserModule,
