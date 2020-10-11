@@ -18,6 +18,23 @@ export class EventServiceService {
     )
   }
 
+  getEventsById(id){
+    let url = `http://localhost:3000/getById/${id}`;
+    console.log(url);
+    return this.http.get(url).pipe(
+      tap(_=>console.log(`Fetched`)),
+      catchError(this.handleError(`Error`))
+    )
+  }
+
+  updateEventDetails(id,seats){
+    let url = `http://localhost:3000/update/${id}/${seats}`;
+    console.log(url);
+    return this.http.get(url).pipe(
+      tap(_=>console.log(`Updated Records`)),
+      catchError(this.handleError(`Error`))
+    )
+  }
   /**
 * Handle Http operation that failed.
 * Let the app continue.

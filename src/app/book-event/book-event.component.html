@@ -1,1 +1,65 @@
-<p>book-event works!</p>
+<div class="container">
+    <div class="row">
+        <i class="fa fa-align-center" aria-hidden="true">
+            <h4>{{event.name}}<span class="badge badge-primary"></span></h4>
+            <h5>Number of Available Seats: {{event.seats}}<span class="badge badge-primary"></span></h5>
+        </i>
+
+    </div>
+</div>
+
+<div class="container" >
+    <div class="row">
+        <div class="col-xs-4">
+            <img class="bd-placeholder-img" width="200" height="250"
+                src="https://live.staticflickr.com/4561/38054606355_26429c884f_b.jpg" alt="">
+
+        </div>
+
+        <div class="col-xs-2" style="padding: 10px;">
+
+        </div>
+
+        <div class="col-xs-6">
+
+                <form class="form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" class="form-control" [(ngModel)]="name" placeholder="" aria-describedby="">
+                        <!-- <small id="" class="text-muted">Help text</small> -->
+                    </div>
+
+                    <div class="form-group">
+                      <label for="email">Email</label>
+                      <input type="email" class="form-control" name="email" id="email" [(ngModel)]="email" aria-describedby="" placeholder="email@email.com">
+                      <!-- <small id="" class="form-text text-muted">Help text</small> -->
+                    </div>
+
+                    <div class="form-group">
+                      <label for="phone">Phone</label>
+                      <input type="tel" class="form-control" name="phone" id="phone" [(ngModel)]="phone" aria-describedby="" placeholder="9876543210">
+                      <!-- <small id="" class="form-text text-muted">Help text</small> -->
+                    </div>
+
+                    <div class="form-group">
+                      <label for="number_of_seats">Number of Seats</label>
+                      <select class="form-control" [(ngModel)]="number_of_seats" name="number_of_seats" id="number_of_seats">
+                        <option>1</option>
+                        <option>2</option>
+                      </select>
+                    </div>
+                    
+                    <div class="form-group">
+                      <label for="attendee">Name of 2nd Attendee</label>
+                      <input type="text" [(ngModel)]="second_attendee"
+                        class="form-control" name="attendee" id="attendee" aria-describedby="" placeholder="Attendee Name">
+                      <!-- <small id=" " class="form-text text-muted">Help text</small> -->
+                    </div>
+                    <button type="button" (click)="onSubmit()" class="btn btn-primary">Submit</button>
+                </form>
+                
+        </div>
+    </div>
+
+
+</div>
